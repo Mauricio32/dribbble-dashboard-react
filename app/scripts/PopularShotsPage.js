@@ -1,7 +1,9 @@
 'use strict';
 
 var React = require('react'),
-    Item = require('./components/Item');    
+    ReactCSSTransitionGroup = require('react-addons-css-transition-group'),
+    Item = require('./components/Item'),
+    URLBuilderService = require('./services/url-builder-service');
 
 var PopularShotsPage = React.createClass({
   getInitialState: function() {
@@ -10,7 +12,7 @@ var PopularShotsPage = React.createClass({
     }
   },
   componentDidMount: function() {
-    this.serverRequest = $.get('https://api.dribbble.com/v1/shots/?access_token=ee32b570ab5be3aeca09b7fb7c07a2700c6685af590986e838308206d000caaa', function(result) {
+    this.serverRequest = $.get(URLBuilderService.popularShots(), function(result) {
       this.setState({
         shots: result
       });
@@ -26,7 +28,9 @@ var PopularShotsPage = React.createClass({
   render: function() {
     if (this.state.shots.length !== 0) {
       return (
-        <div className='popular-shots'>{Object.keys(this.state.shots).map(this.renderShots) }</div>
+        <ReactCSSTransitionGroup transitionName="shots" transitionEnterTimeout={5000} transitionLeaveTimeout={300}>
+          <div className='popular-shots'>{Object.keys(this.state.shots).map(this.renderShots) }</div>
+        </ReactCSSTransitionGroup>
       );
     }
     return null;

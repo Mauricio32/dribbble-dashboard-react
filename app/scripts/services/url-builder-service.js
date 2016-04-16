@@ -1,13 +1,19 @@
 'use strict';
 
-var react = require('react');
+var config = require('../../settings.json');
 
-var URLBuilderService = React.createClass({
-  statics: {
-    popularShots: function(){
-      return 'https://api.dribbble.com/v1/shots/?access_token=ee32b570ab5be3aeca09b7fb7c07a2700c6685af590986e838308206d000caaa';
-    }
+/**
+  The responsible service to build URL
+*/
+class URLBuilderService {
+  static popularShots() {    
+    return `${config.rootApi}/shots/?access_token=${config.accessToken}`;
   }
-});
+  
+  static shotDetails(shotId) {
+    return `${config.rootApi}/shots/${shotId}/?access_token=${config.accessToken}`;
+  }
+
+}
 
 module.exports = URLBuilderService;

@@ -1,0 +1,17 @@
+.shots-enter {
+  opacity: 0.01;
+}
+
+.shots-enter.shots-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.shots-leave {
+  opacity: 1;
+}
+
+.shots-leave.shots-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

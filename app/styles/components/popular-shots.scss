@@ -1,6 +1,30 @@
-.popular-shots {
-  .photo {
+.popular-shots {    
+  .item-container {
+    position: relative;
     float: left;
-    padding: 1vw;
+    margin: 1vw;
+    
+    .image {
+      position: relative;
+      width: 100%
+    }
+    
+    .item-info {          
+      position: absolute; 
+      bottom: 0; 
+      left: 0; 
+      width: 100%;
+      background: #000;
+      color: #fff;
+      
+      .text {
+        float: left;
+        padding-left: 0.8vw;
+      }
+      .views {
+        float: right;
+        padding-right: 0.8vw;
+      }          
+    }    
   }
 }

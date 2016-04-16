@@ -1,7 +1,8 @@
 'use strict';
 
 var React = require('react'),
-  Item = require('./components/Item');
+  Item = require('./components/Item'),
+  URLBuilderService = require('./services/url-builder-service');
 
 var ShotDetailsPage = React.createClass({
   getInitialState: function() {
@@ -9,9 +10,8 @@ var ShotDetailsPage = React.createClass({
       shotDetails: null
     }
   },
-  componentDidMount: function() {
-    var apiCall = `https://api.dribbble.com/v1/shots/${this.props.params.shotId}/?access_token=ee32b570ab5be3aeca09b7fb7c07a2700c6685af590986e838308206d000caaa`
-    this.serverRequest = $.get(apiCall, function(result) {
+  componentDidMount: function() {    
+    this.serverRequest = $.get(URLBuilderService.shotDetails(this.props.params.shotId), function(result) {
       this.setState({
         shotDetails: result
       });
@@ -19,8 +19,7 @@ var ShotDetailsPage = React.createClass({
   },
 
   render: function() {    
-    if (this.state.shotDetails) {
-      console.log(this);
+    if (this.state.shotDetails) {      
       return (
         <div className='shot-details'>
           <div className='highlight-photo'>
@@ -32,7 +31,7 @@ var ShotDetailsPage = React.createClass({
               <p>{this.state.shotDetails.user.name}</p>
             </div>
             <div className='description'>
-              {this.state.shotDetails.description}
+             <p dangerouslySetInnerHTML={{__html: this.state.shotDetails.description}}></p>              
             </div>
           </div>
         </div>

@@ -29,7 +29,6 @@
     "gulp-imagemin": "latest",
     "gulp-jshint": "~1.8.5",
     "gulp-load-plugins": "~0.7.0",
-    "gulp-ruby-sass": "~1.0.5",
     "gulp-sass": "^2.2.0",
     "gulp-size": "~1.1.0",
     "gulp-strip-debug": "^1.0.2",
@@ -39,6 +38,7 @@
     "gulp-webserver": "latest",
     "main-bower-files": "~2.6.2",
     "react": "latest",
+    "react-addons-css-transition-group": "^15.0.1",
     "react-dom": "latest",
     "react-router": "^2.2.4",
     "react-tools": "latest",
@@ -65,5 +65,8 @@
   },
   "browserify-shim": {
     "jquery": "$"
+  },
+  "dependencies": {
+    "url": "^0.11.0"
   }
 }
