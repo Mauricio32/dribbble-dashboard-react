@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodem server.js",
+    "test": "echo \"No test specified\"",
+    "start": "nodemon server.js",
     "lint": "eslint --ext .jsx --ext .js ."
   },
   "repository": {
