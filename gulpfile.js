@@ -8,7 +8,7 @@ var browserify = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream'),
 
-  sourceFile = './app/scripts/main.js',
+  sourceFile = './app/scripts/main.jsx',
 
   destFolder = './dist/scripts',
   destFileName = 'app.js';

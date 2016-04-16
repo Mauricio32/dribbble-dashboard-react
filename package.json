@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodem server.js",
+    "lint": "eslint --ext .jsx --ext .js ."
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "gulp-autoprefixer": "~1.0.1",
     "gulp-bower": "0.0.6",
     "gulp-cache": "~0.2.4",
+    "gulp-eslint": "^2.0.0",
     "gulp-imagemin": "latest",
     "gulp-jshint": "~1.8.5",
     "gulp-load-plugins": "~0.7.0",
@@ -67,6 +69,8 @@
     "jquery": "$"
   },
   "dependencies": {
+    "eslint": "^2.8.0",
+    "eslint-plugin-react": "^4.3.0",
     "express": "^4.13.4",
     "path": "^0.12.7",
     "url": "^0.11.0"

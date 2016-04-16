@@ -1,8 +1,6 @@
 'use strict';
 
-var React = window.React = require('react'),
-  Header = require('./components/header'),
-  Footer = require('./components/footer');
+var React = window.React = require('react');  
 
 var App = React.createClass({
   render: function() {
