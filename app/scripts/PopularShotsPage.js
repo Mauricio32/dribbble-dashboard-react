@@ -21,7 +21,7 @@ var PopularShotsPage = React.createClass({
 
   renderShots: function(shot) {
     return (
-      <Item content={this.state.shots[shot]} key={shot} />
+      <Item content={this.state.shots[shot]} key={shot} imageSize="normal" />
     );
   },
 

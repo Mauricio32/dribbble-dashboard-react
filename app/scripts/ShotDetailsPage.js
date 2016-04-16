@@ -2,7 +2,7 @@
 
 var React = require('react'),
   Item = require('./components/Item'),
-  URLBuilderService = require('./services/url-builder-service');
+  URLBuilderService = require('./services/url-builder-service');  
 
 var ShotDetailsPage = React.createClass({
   getInitialState: function() {
@@ -22,9 +22,8 @@ var ShotDetailsPage = React.createClass({
     if (this.state.shotDetails) {      
       return (
         <div className='shot-details'>
-          <div className='highlight-photo'>
-            <img src={this.state.shotDetails.images.hidpi} />
-          </div>
+          <Item content={this.state.shotDetails} imageSize='hidpi' />
+                    
           <div className='description-block'>
             <div className='user-info'>
               <img src={this.state.shotDetails.user.avatar_url} />

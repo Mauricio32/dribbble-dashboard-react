@@ -1,37 +1,39 @@
-.popular-shots {    
+.popular-shots {
   .item-container {
-    position: relative;
     float: left;
-    margin: 1vw;
-    
-    .image {
-      position: relative;
-      width: 100%
-    }
-    
-    .item-info {          
-      position: absolute; 
-      bottom: 0; 
-      left: 0; 
-      width: 100%;
-      /* Fallback for web browsers that don't support RGBa */
-      background-color: rgb(0, 0, 0);
-      /* RGBa with 0.6 opacity */
-      background-color: rgba(0, 0, 0, 0.6);
-      /* For IE 5.5 - 7*/
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-      /* For IE 8*/
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-      color: #fff;
-      
-      .text {
-        float: left;
-        padding-left: 0.8vw;
-      }
-      .views {
-        float: right;
-        padding-right: 0.8vw;
-      }          
-    }    
+  }  
+}  
+
+.item-container {
+  position: relative;  
+  margin: 1vw;        
+  
+  .image {
+    position: relative;      
   }
+  
+  .item-info {          
+    position: absolute; 
+    bottom: 4px; 
+    left: 0; 
+    width: 100%;
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    color: #fff;
+    
+    .text {
+      float: left;
+      padding-left: 0.8vw;
+    }
+    .views {
+      float: right;
+      padding-right: 0.8vw;
+    }          
+  }    
 }
