@@ -1,0 +1,21 @@
+{
+  "name": "dribbble-dashboard-react",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mauricio Forte Neto <mauricioforteneto@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Mauricio32/dribbble-dashboard-react",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}
