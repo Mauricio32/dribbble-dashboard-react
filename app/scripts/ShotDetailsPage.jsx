@@ -8,7 +8,7 @@ var ShotDetailsPage = React.createClass({
   getInitialState: function() {
     return {
       shotDetails: null
-    }
+    };
   },
   componentDidMount: function() {    
     this.serverRequest = $.get(URLBuilderService.shotDetails(this.props.params.shotId), function(result) {

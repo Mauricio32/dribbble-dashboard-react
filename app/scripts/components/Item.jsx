@@ -6,11 +6,12 @@ var React = require('react'),
 var Item = React.createClass({
   render: function() {
     var detailsLink = `details/${this.props.content.id}`;
+    var image;
 
     if (this.props.imageSize === 'hidpi' && this.props.content.images.hidpi)
-      var image = this.props.content.images.hidpi;
+       image = this.props.content.images.hidpi;
     else
-      var image = this.props.content.images.normal;
+       image = this.props.content.images.normal;
 
     return (
       <div className="item-container">

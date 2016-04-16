@@ -9,7 +9,7 @@ var PopularShotsPage = React.createClass({
   getInitialState: function() {
     return {
       shots: []
-    }
+    };
   },
   componentDidMount: function() {
     this.serverRequest = $.get(URLBuilderService.popularShots(), function(result) {
