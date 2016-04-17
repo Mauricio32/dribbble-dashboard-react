@@ -1,0 +1,31 @@
+.shot-details {
+  clear: both;
+  margin: 0 auto;
+  max-width: 820px;
+  text-align: center;
+  
+  .user-info {
+    display: block;
+    .user-avatar {
+      float: left;
+      img {
+        max-width: 50%;
+        border-radius: 2vw;
+      }
+    }
+    .user-name {
+      float: left;
+      margin-top: 2vh;
+      font-size: 1.6em;
+    }
+  }
+  
+  .description {
+    clear: both; 
+    float: left; 
+    display: block; 
+    position: relative;
+    margin-top: 3vh;
+    margin-left: 2vh;
+  }
+}

@@ -2,7 +2,7 @@
 
 var React = require('react'),
   Item = require('./components/Item.jsx'),
-  URLBuilderService = require('./services/url-builder-service');  
+  URLBuilderService = require('./services/url-builder-service');
 
 var ShotDetailsPage = React.createClass({
   getInitialState: function() {
@@ -10,7 +10,7 @@ var ShotDetailsPage = React.createClass({
       shotDetails: null
     };
   },
-  componentDidMount: function() {    
+  componentDidMount: function() {
     this.serverRequest = $.get(URLBuilderService.shotDetails(this.props.params.shotId), function(result) {
       this.setState({
         shotDetails: result
@@ -18,19 +18,23 @@ var ShotDetailsPage = React.createClass({
     }.bind(this));
   },
 
-  render: function() {    
-    if (this.state.shotDetails) {      
+  render: function() {
+    if (this.state.shotDetails) {
       return (
         <div className='shot-details'>
           <Item content={this.state.shotDetails} imageSize='hidpi' />
-                    
+
           <div className='description-block'>
             <div className='user-info'>
-              <img src={this.state.shotDetails.user.avatar_url} />
-              <p>{this.state.shotDetails.user.name}</p>
+              <div className="user-avatar">
+                <img src={this.state.shotDetails.user.avatar_url} />
+              </div>
+              <div className="user-name">
+                <p>{this.state.shotDetails.user.name}</p>
+              </div>
             </div>
             <div className='description'>
-             <p dangerouslySetInnerHTML={{__html: this.state.shotDetails.description}}></p>              
+              <p dangerouslySetInnerHTML={{ __html: this.state.shotDetails.description }}></p>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ var React = require('react'),
 
 var Item = React.createClass({
   render: function() {
+    console.log(this.props.content);
     var detailsLink = `details/${this.props.content.id}`;
     var image;
 
