@@ -2,7 +2,7 @@
 
 var React = require('react'),
     ReactCSSTransitionGroup = require('react-addons-css-transition-group'),
-    Item = require('./components/Item'),
+    Item = require('./components/Item.jsx'),
     URLBuilderService = require('./services/url-builder-service');
 
 var PopularShotsPage = React.createClass({

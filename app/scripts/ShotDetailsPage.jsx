@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react'),
-  Item = require('./components/Item'),
+  Item = require('./components/Item.jsx'),
   URLBuilderService = require('./services/url-builder-service');  
 
 var ShotDetailsPage = React.createClass({

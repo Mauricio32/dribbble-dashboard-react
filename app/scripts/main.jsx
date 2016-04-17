@@ -4,9 +4,9 @@ var React = window.React = require('react'),
   Route = require('react-router').Route,
   IndexRoute = require('react-router').IndexRoute,
   browserHistory = require('react-router').browserHistory,
-  App = require('./app'),
-  PopularShotsPage = require('./PopularShotsPage'),
-  ShotDetailsPage = require('./ShotDetailsPage');
+  App = require('./app.jsx'),
+  PopularShotsPage = require('./PopularShotsPage.jsx'),
+  ShotDetailsPage = require('./ShotDetailsPage.jsx');
 
 render((
   <Router history={browserHistory}>
