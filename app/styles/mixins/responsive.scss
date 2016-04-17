@@ -1,0 +1,59 @@
+@mixin desktop-xxlarge {
+  @media (max-width: #{$desktop-xxlarge}) {
+    @content;
+  }
+}
+
+@mixin desktop-xlarge {
+  @media (max-width: #{$desktop-xlarge}) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (max-width: #{$desktop-large}) {
+    @content;
+  }
+}
+
+@mixin desktop-medium {
+  @media (max-width: #{$desktop-medium}) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media (max-width: #{$notebook}) {
+    @content;
+  }
+}
+
+@mixin tablet-land {
+  @media (max-width: #{$tablet-land}) {
+    @content;
+  }
+}
+
+@mixin tablet-middle {
+  @media (max-width: #{$tablet-middle}) {
+    @content;
+  }
+}
+
+@mixin tablet-port {
+  @media (max-width: #{$tablet-port}) {
+    @content;
+  }
+}
+
+@mixin smartphone-land {
+  @media (max-width: #{$smartphone-land}) {
+    @content;
+  }
+}
+
+@mixin smartphone-port {
+  @media (max-width: #{$smartphone-port}) {
+    @content;
+  }
+}

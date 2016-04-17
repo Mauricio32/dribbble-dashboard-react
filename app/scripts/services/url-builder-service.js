@@ -7,7 +7,7 @@ var config = require('../../settings.json');
 */
 class URLBuilderService {
   static popularShots() {    
-    return `${config.rootApi}/shots/?access_token=${config.accessToken}`;
+    return `${config.rootApi}/shots/?timeframe=${config.timeframe}&access_token=${config.accessToken}`;
   }
   
   static shotDetails(shotId) {

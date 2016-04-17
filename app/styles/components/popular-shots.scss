@@ -1,7 +1,9 @@
 .popular-shots {
-  .item-container {
-    float: left;
-  }  
+  .shots-group {    
+    .item-container {
+      float: left;
+    }    
+  }    
 }  
 
 .item-container {
@@ -9,7 +11,8 @@
   margin: 1vw;        
   
   .image {
-    position: relative;      
+    position: relative;
+    max-width: 100%;      
   }
   
   .item-info {          
@@ -26,6 +29,8 @@
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
     color: #fff;
+    height: 15%;
+    padding-top: 0.8vh;
     
     .text {
       float: left;

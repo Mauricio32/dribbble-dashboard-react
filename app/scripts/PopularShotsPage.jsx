@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require('react'),
-    ReactCSSTransitionGroup = require('react-addons-css-transition-group'),
-    Item = require('./components/Item.jsx'),
-    URLBuilderService = require('./services/url-builder-service');
+  ReactCSSTransitionGroup = require('react-addons-css-transition-group'),
+  Item = require('./components/Item.jsx'),
+  URLBuilderService = require('./services/url-builder-service');
 
 var PopularShotsPage = React.createClass({
   getInitialState: function() {
@@ -28,9 +28,11 @@ var PopularShotsPage = React.createClass({
   render: function() {
     if (this.state.shots.length !== 0) {
       return (
-        <ReactCSSTransitionGroup transitionName="shots" transitionEnterTimeout={5000} transitionLeaveTimeout={300}>
-          <div className='popular-shots'>{Object.keys(this.state.shots).map(this.renderShots) }</div>
-        </ReactCSSTransitionGroup>
+        <div className='popular-shots'>
+          <div className="shots-group">
+            {Object.keys(this.state.shots).map(this.renderShots) }
+          </div>
+        </div>
       );
     }
     return null;

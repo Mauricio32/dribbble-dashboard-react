@@ -1,5 +1,6 @@
 {
   "rootPath": "/",
   "rootApi": "https://api.dribbble.com/v1/",
-  "accessToken": "ee32b570ab5be3aeca09b7fb7c07a2700c6685af590986e838308206d000caaa"
+  "accessToken": "ee32b570ab5be3aeca09b7fb7c07a2700c6685af590986e838308206d000caaa",
+  "timeframe": "now"
 }
