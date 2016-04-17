@@ -1,7 +1,6 @@
 'use strict';
 
-var React = require('react'),
-  ReactCSSTransitionGroup = require('react-addons-css-transition-group'),
+var React = require('react'),  
   Item = require('./components/Item.jsx'),
   URLBuilderService = require('./services/url-builder-service');
 

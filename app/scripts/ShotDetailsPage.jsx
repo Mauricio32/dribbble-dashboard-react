@@ -12,7 +12,7 @@ var ShotDetailsPage = React.createClass({
   },
   componentDidMount: function() {
     this.serverRequest = $.get(URLBuilderService.shotDetails(this.props.params.shotId), function(result) {
-      this.setState({
+      this.setState({ 
         shotDetails: result
       });
     }.bind(this));
@@ -22,7 +22,7 @@ var ShotDetailsPage = React.createClass({
     if (this.state.shotDetails) {
       return (
         <div className='shot-details'>
-          <Item content={this.state.shotDetails} imageSize='hidpi' />
+          <Item content={this.state.shotDetails} imageSize='hidpi' page='details' />
 
           <div className='description-block'>
             <div className='user-info'>

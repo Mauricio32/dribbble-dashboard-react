@@ -4,8 +4,7 @@ var React = require('react'),
   Link = require('react-router').Link;
 
 var Item = React.createClass({
-  render: function() {
-    console.log(this.props.content);
+  render: function() {    
     var detailsLink = `details/${this.props.content.id}`;
     var image;
 
