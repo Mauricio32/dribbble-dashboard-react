@@ -7,21 +7,25 @@ var React = require('react'),
 var ShotDetailsPage = React.createClass({
   getInitialState: function() {
     return {
-      shotDetails: null
+      shotDetails: null,
+      shotsVisible: false
     };
   },
   componentDidMount: function() {
     this.serverRequest = $.get(URLBuilderService.shotDetails(this.props.params.shotId), function(result) {
       this.setState({ 
-        shotDetails: result
+        shotDetails: result,
+        shotsVisible: true
       });
     }.bind(this));
   },
 
   render: function() {
+    var shotsState = this.state.shotsVisible ? 'visible' : '';
+    
     if (this.state.shotDetails) {
       return (
-        <div className='shot-details'>
+        <div className={`shot-details ${shotsState} `}>        
           <Item content={this.state.shotDetails} imageSize='hidpi' page='details' />
 
           <div className='description-block'>

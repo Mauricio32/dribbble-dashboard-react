@@ -1,19 +1,21 @@
 'use strict';
 
-var React = require('react'),  
+var React = require('react'),
   Item = require('./components/Item.jsx'),
   URLBuilderService = require('./services/url-builder-service');
 
 var PopularShotsPage = React.createClass({
   getInitialState: function() {
     return {
-      shots: []
+      shots: [],
+      shotsVisible: false
     };
   },
   componentDidMount: function() {
     this.serverRequest = $.get(URLBuilderService.popularShots(), function(result) {
       this.setState({
-        shots: result
+        shots: result,
+        shotsVisible: true
       });
     }.bind(this));
   },
@@ -25,9 +27,11 @@ var PopularShotsPage = React.createClass({
   },
 
   render: function() {
+    var shotsState = this.state.shotsVisible ? 'visible' : '';
+
     if (this.state.shots.length !== 0) {
       return (
-        <div className='popular-shots'>
+        <div className={`popular-shots ${shotsState} `}>
           <div className="shots-group">
             {Object.keys(this.state.shots).map(this.renderShots) }
           </div>

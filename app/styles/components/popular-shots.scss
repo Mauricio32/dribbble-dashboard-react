@@ -8,11 +8,17 @@
 
 .item-container {
   position: relative;  
-  margin: 1vw;        
+  margin: 1vw;       
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all .25s ease; /* Safari */
+  transition: all .25s ease;  
   
   .image {
     position: relative;
     max-width: 100%;      
+    -webkit-transition: all .25s ease; /* Safari */
+    transition: all .25s ease;  
   }
   
   .item-info {          
@@ -30,7 +36,14 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
     color: #fff;
     height: 15%;
-    padding-top: 0.8vh;
+    font-size: 3vw;
+    padding: 3.5vw 1.5vw;
+    -webkit-transition: all .25s ease; /* Safari */
+    transition: all .25s ease;  
+    @media screen and (min-width: 480px) {
+      padding: 14px;
+      font-size: 15px;
+    }
     
     .text {
       float: left;
