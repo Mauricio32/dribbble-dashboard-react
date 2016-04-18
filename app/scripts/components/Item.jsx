@@ -25,7 +25,7 @@ var Item = React.createClass({
             </div>
           </div>
         </div>
-      )
+      );
     }
     return (
       <Link to={`details/${this.props.content.id}`} >
@@ -39,7 +39,7 @@ var Item = React.createClass({
           </div>
         </div>
       </Link>
-    )
+    );
   },
 
   render: function() {
