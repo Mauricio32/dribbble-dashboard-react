@@ -34,6 +34,8 @@ Task usada para servir a pasta de "dist" e buildar a aplicação.
 - npm install && bower install
 - gulp watch
 
+A aplicação rodará na porta 3000
+
 ### Build
 
 - gulp (criação de um diretório chamado dist, ignorado pelo git)
