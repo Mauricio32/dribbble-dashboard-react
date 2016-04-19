@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 var del = require('del');
 
-// Include Our Plugins
+// Include plugins
 var $ = require('gulp-load-plugins')();
 var browserify = require('browserify');
 var watchify = require('watchify');
@@ -37,8 +37,7 @@ bundler.on('update', rebundle);
 bundler.on('log', $.util.log);
 
 function rebundle() {
-  return bundler.bundle()
-    // log errors if they happen
+  return bundler.bundle()    
     .on('error', $.util.log.bind($.util, 'Browserify Error'))
     .pipe(source(destFileName))
     .pipe(gulp.dest(destFolder))
@@ -111,9 +110,7 @@ gulp.task('buildBundle', ['styles', 'buildScripts', 'moveLibraries', 'bower'], f
 });
 
 // Move JS Files and Libraries
-gulp.task('moveLibraries', ['clean'], function() {
-  // the base option sets the relative root for the set of files,
-  // preserving the folder structure
+gulp.task('moveLibraries', ['clean'], function() {  
   gulp.src(['./app/scripts/**/*.js'], { base: './app/scripts/' })
     .pipe(gulp.dest('dist/scripts'));
 });
@@ -161,11 +158,7 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
 
   browserSync({
     notify: false,
-    logPrefix: 'BS',
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
+    logPrefix: 'BS',    
     server: {
       baseDir: './dist/',
       index: '/index.html',
@@ -180,8 +173,6 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
   gulp.watch('app/*.html', ['html']);
 
   gulp.watch(['app/styles/**/*.scss', 'app/styles/**/*.css'], ['styles', 'scripts', reload]);
-
-
 
   // Watch image files
   gulp.watch('app/images/**/*', reload);
