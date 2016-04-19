@@ -44,6 +44,8 @@ A aplicação rodará na porta 3000
 
 - npm start
 
+O comando irá criar um servidor sem browser-sync na porta 3000 usando o nodemon
+
 ### Task de eslint
 
 - npm run lint
