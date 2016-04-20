@@ -2,7 +2,7 @@
   "name": "dribbble-dashboard-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"No test specified\"",
     "start": "node server.js",
